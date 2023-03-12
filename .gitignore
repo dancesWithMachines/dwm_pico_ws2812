@@ -1,0 +1,3 @@
+build/*
+dwm_pico_ws2812/generated/*
+.vscode
