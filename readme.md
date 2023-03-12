@@ -9,6 +9,10 @@ Library is blocking type, needs about 20ms in between changes.
 ## How to build example
 Open `CMakeLists.txt` and edit `PICO_SDK_PATH`, set your SDK path accordingly.
 
+Add directory called `generated` inside library directory (`./dwm_pico_ws2812/`).
+
+Add directory called `build` inside main repo directory (`./`).
+
 Next go to `build` directory and run command `cmake ..`
 
 If no errors were reported, you can run `make` command to build the project.
@@ -17,9 +21,11 @@ Default pin for led is pin 16 and number of led in led strip is 8. You can edit
 `NUM_PIXELS 8` and `WS2812_LEDSTRIP_PIN 16` to match your setup.
 
 ## How to add to project
-Copy dwm_pico_ws2812 directory (the one inside the repo) to your project, and necessary lines to `CMakeLists.txt` and voila.
+Add directory called `generated` inside library directory (`./dwm_pico_ws2812/`).
 
-Necessary lines to add are marked with `<--` in `CMakeLists.txt`.
+Copy dwm_pico_ws2812 library directory (the one inside the repo) to your project, add necessary lines to `CMakeLists.txt` and voila.
+
+Necessary lines to add are marked with `<--` in `CMakeLists.txt`, use them as example.
 
 ## How to use
 Every function operates around struct `ledStrip_t`.
